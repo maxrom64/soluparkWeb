@@ -246,13 +246,11 @@ List<String> list_map_address 	= (List<String>) request.getAttribute("list_addre
         		);
         		(marker, i);
       		}
-      		}
-      		
+      		}	
     		</script>
     		
     		<script async defer
     		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXwLgKExLrciBvKknXo1Igo8P4G-a07Co&callback=initMap&libraries=&v=weekly">
     		</script> 
-
 </html>
 

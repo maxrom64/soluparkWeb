@@ -41,17 +41,17 @@
                                 <form method="post" action="/Solupark/Ajoutparking">
                                 <input name="email" type="text" value="${ sessionScope.email }"/>
                                 
-                                    <!-- Entrees de l'adresse -->
+                                    <!-- Entree de l'adresse -->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" name="address" type="text" placeholder="Adresse" maxlength="40" data-sb-validations="nom valide" />
                                         <label for="Adress">Adresse</label>
                                     </div>
-                                    <!-- Entr�e du code postal -->
+                                    <!-- Entree du code postal -->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" name="codePostal" type="number" placeholder="Code Postal" data-sb-validations="Code Postal" />
                                         <label for="CodePostal">Code Postal</label>
                                     </div>
-                                     <!-- Entr�e de la ville-->
+                                     <!-- Entree de la ville-->
                                      <div class="form-floating mb-3">
                                         <input class="form-control" name="ville" type="text" placeholder="Ville" data-sb-validations="Ville" />
                                         <label for="Ville">Ville</label>
@@ -103,12 +103,7 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
