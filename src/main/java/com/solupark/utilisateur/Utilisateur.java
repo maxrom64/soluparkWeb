@@ -15,7 +15,7 @@ public class Utilisateur {
 	public boolean valid;
 
 /**
-* Le constructeur prend cinq paramètres et les affecte aux champs portant le même nom.
+* Le constructeur de la classe Utilisateur prend cinq paramètres et les affecte aux champs portant le même nom.
 * @param nom le nom de l'utilisateur
 * @param prenom le prénom de l'utilisateur
 * @param email l'email de l'utilisateur

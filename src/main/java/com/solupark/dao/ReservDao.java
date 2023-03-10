@@ -57,26 +57,26 @@ public class ReservDao {
 		String sql_user = "select user_id from parking where park_id= ?";											// instruction SQL pour inserer dans la table parking les paramètres
 		String sql = "insert into reservation(park_id,user_id, date_debut, date_fin) values (?,?,?,?)";				// instruction SQL pour inserer dans la table reservation les paramètres
 		String result="Parking réservé";																			// initialisation d'une variable avec la valeur "utilisateur inscrit"
-		String user_id= "";																							//
+		String user_id= "";																							// declaration d'une variable de type chaines de caractères vide
 		try {
-			Statement state = con.createStatement();
-			PreparedStatement ps0 = con.prepareStatement(sql_user);
-			ps0.setString(1, park_id);
-			ResultSet resultat = ps0.executeQuery();
-			resultat.next();
-			user_id = resultat.getString(1);
-			resultat.close();
+			Statement state = con.createStatement();																// Création un objet Statement à partir de l'objet Connection existant, et l'assigne à la variable d'état "state".
+			PreparedStatement ps0 = con.prepareStatement(sql_user);													// préparation de la requête SQL en utilisant la chaine de caractère sql_user
+			ps0.setString(1, park_id);																				// on affecte la valeur variable park_id au premier paramètre de la requête préparée ps0
+			ResultSet resultat = ps0.executeQuery();																// execution de la requête ps0 et stockage du resultat dans "resultat"
+			resultat.next();																						// on parcours les resultats de la reqûete vers la prochaine ligne
+			user_id = resultat.getString(1);																		// on récupère la valeur de la première colonne de la ligne	
+			resultat.close();													
 			state.close();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, reservation.getPark_id());
-			ps.setString(2, user_id);
-			ps.setString(3, reservation.getDate_debut());
-			ps.setString(4, reservation.getDate_fin());
-			ps.executeUpdate();
+			PreparedStatement ps = con.prepareStatement(sql);														// préparation de la requête SQL en utilisant la chaine de caractère sql
+			ps.setString(1, reservation.getPark_id());																// on affecte la valeur de l'identifiant du parking de la réservation "reservation"
+			ps.setString(2, user_id);																				// on affecte la valeur de l'identifiant de l'utilisateur "user_id" au deuxième paramètre de la requête préparée "ps"
+			ps.setString(3, reservation.getDate_debut());															// on affecte la valeur de la date de début de la réservation "reservation" au troisième paramètre de la requête préparée "ps"
+			ps.setString(4, reservation.getDate_fin());																// on affecte la valeur de la date de fin de la réservation "reservation" au quatrième paramètre de la requête préparée "ps".
+			ps.executeUpdate();																						// on exécute la requête préparée "ps" pour insérer la nouvelle ligne dans la table de réservations.
 			} catch (SQLException e) {
 				 result="Parking non réservé";
 				 e.printStackTrace();
 			 	}	
-			 return result;
+			 return result;																							//on renvoie la valeur stockée de la variable resultat 
 			 }
 	}

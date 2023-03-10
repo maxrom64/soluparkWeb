@@ -12,10 +12,10 @@ Cette classe gère les utilisateurs dans une base de données MySQL. Elle fourni
 @author Maxime ROMERO
 */ 
 public class UtilisateurDao {											
- private String dburl = "jdbc:mysql://localhost:3306/solupark";							//**URL de la base de données MySQL.*/
- private String dbuname = "root";														//** Nom d'utilisateur de la base de données MySQL.*/	
- private String dbpassword = "root";													//** Mot de passe de la base de données MySQL.*/
- private String dbdriver = "com.mysql.cj.jdbc.Driver";									//**Pilote de la base de données MySQL.*/
+ private String dburl = "jdbc:mysql://localhost:3306/solupark";							//URL de la base de données MySQL
+ private String dbuname = "root";														//Nom d'utilisateur de la base de données MySQL	
+ private String dbpassword = "root";													//Mot de passe de la base de données MySQL
+ private String dbdriver = "com.mysql.cj.jdbc.Driver";									//Pilote de la base de données MySQL
 
  /**
  Cette méthode charge le pilote JDBC spécifié.
